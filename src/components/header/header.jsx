@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 
 import './header.styles.scss';
 import { ReactComponent as Logo } from './crown.svg';
-
+import CartIcon  from '../cart-icon/cart-icon';
+import CartDropdown from '../cart-dropdown/cart-dropdown';
 import { auth } from '../../firebase/firebase.utils.js';
 
 const Header = ({ currentUser }) => (
@@ -26,7 +27,9 @@ const Header = ({ currentUser }) => (
                 :
                 <Link className='option' to='/signup'>SIGN IN</Link>
             }
+            <CartIcon />
         </div>
+        <CartDropdown />
     </div>
 )
 
